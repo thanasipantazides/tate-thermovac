@@ -1,0 +1,12 @@
+*.DS_Store
+~*
+
+# KiCad
+*.lck
+*.zip
+
+tvac-backups/
+
+fabrication-toolkit-options.json
+
+*.pdf
