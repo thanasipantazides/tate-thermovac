@@ -753,7 +753,7 @@
         "uuid": "87c46ba2-aff0-4015-b6b5-48e551a9c456"
       }
     ],
-    "used_designators": "A2-3,DE1,L1-2,TP1-11,U1-12,SW1-4,C1-76,Q1,D1-4,#PWR1-58,RSENSE2,J1-12,R1-10,R12-39,H1-4,JP1-7,Module1",
+    "used_designators": "A2-3,Q1,D1-4,#PWR1-58,DE1,TP1-11,U1-12,SW1-4,C1-76,RSENSE2,J1-12,L1-2,R1-10,R12-39,H1-4,JP1-7,Module1",
     "variants": []
   },
   "sheets": [

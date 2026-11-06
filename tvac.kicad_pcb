@@ -3623,7 +3623,7 @@
 			)
 		)
 		(property "Value" "LT8643S"
-			(at 0 3.33 270)
+			(at 0 3.33 90)
 			(layer "F.Fab")
 			(uuid "394b405c-0cd7-41e9-8683-b0bc2a100ab5")
 			(effects
@@ -3634,7 +3634,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/lt8640s-8643s.pdf"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7db76a51-52de-4298-b938-0559425b1ac5")
@@ -3645,7 +3645,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "01fcaad1-9bf6-40f0-bb96-fc72e957048d")
@@ -3656,7 +3656,7 @@
 			)
 		)
 		(property "KiLib_Generator" "package/no_lead"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "be963d31-f43c-4588-9690-41f62b29314f")
@@ -3985,7 +3985,7 @@
 			(uuid "1b16c016-3aac-463f-a647-99af2e1415a6")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(uuid "fa368d93-369c-4aaa-a6b0-509ba636f6c7")
 			(effects
@@ -37629,6 +37629,83 @@
 			(justify left bottom)
 		)
 	)
+	(gr_text "J11: Thermistors and analog inputs"
+		(at 149.6 206.2 0)
+		(layer "Cmts.User")
+		(uuid "64633850-fb64-44b4-8878-eae0fd803306")
+		(effects
+			(font
+				(size 3 3)
+			)
+			(justify left)
+		)
+	)
+	(gr_text "J10: GPIOs"
+		(at 241.1 120.2 0)
+		(layer "Cmts.User")
+		(uuid "682051de-a8d3-48ab-b0bc-bd0c4c13ae0e")
+		(effects
+			(font
+				(size 3 3)
+			)
+			(justify left)
+		)
+	)
+	(gr_text "J9: SD power"
+		(at 241.2 130.618521 0)
+		(layer "Cmts.User")
+		(uuid "ed02880a-0c74-4c99-8248-38fc300b119d")
+		(effects
+			(font
+				(size 3 3)
+			)
+			(justify left)
+		)
+	)
+	(gr_text "J2: microSD card"
+		(at 241.3 140.4 0)
+		(layer "Cmts.User")
+		(uuid "69d692df-4a0d-41fb-a11e-c2811978266c")
+		(effects
+			(font
+				(size 3 3)
+			)
+			(justify left)
+		)
+	)
+	(gr_text "J3: power in"
+		(at 132.4 95.6 0)
+		(layer "Cmts.User")
+		(uuid "4bbeb903-97dd-43f8-b06f-a2c82cca96a3")
+		(effects
+			(font
+				(size 3 3)
+			)
+			(justify right)
+		)
+	)
+	(gr_text "J7: HDMI"
+		(at 132.5 141.8 0)
+		(layer "Cmts.User")
+		(uuid "ea6fa999-8193-44c6-9fdc-203282432488")
+		(effects
+			(font
+				(size 3 3)
+			)
+			(justify right)
+		)
+	)
+	(gr_text "J4: USB"
+		(at 196.2 68.1 90)
+		(layer "Cmts.User")
+		(uuid "01d29968-37ce-4e49-84fc-5c5a076f8ebd")
+		(effects
+			(font
+				(size 3 3)
+			)
+			(justify left)
+		)
+	)
 	(gr_text "Hirose conn 2 barycenter"
 		(at 168.64 120.4 0)
 		(layer "User.1")
@@ -37693,6 +37770,41 @@
 				(font
 					(size 1 1)
 					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(dimension
+		(type leader)
+		(layer "Cmts.User")
+		(uuid "71d80438-03cf-426c-9131-84b87d76085d")
+		(pts
+			(xy 233 77) (xy 250.8 59.2)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 0)
+			(units_format 0)
+			(precision 4)
+			(override_value "4x M4")
+		)
+		(style
+			(thickness 0.5)
+			(arrow_length 4)
+			(text_position_mode 0)
+			(text_frame 0)
+			(extension_offset 0.5)
+		)
+		(gr_text "4x M4"
+			(at 284.9 59.2 0)
+			(layer "Cmts.User")
+			(uuid "71d80438-03cf-426c-9131-84b87d76085d")
+			(effects
+				(font
+					(size 4 4)
+					(thickness 0.8)
+					(bold yes)
 				)
 			)
 		)
@@ -37845,6 +37957,162 @@
 				(font
 					(size 1 1)
 					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "Cmts.User")
+		(uuid "14e28655-beae-4fef-ad3f-c8af4e670efc")
+		(pts
+			(xy 146.145207 71) (xy 146.145207 191)
+		)
+		(height -55.645207)
+		(orientation 1)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 0)
+			(precision 4)
+			(suppress_zeroes yes)
+		)
+		(style
+			(thickness 0.5)
+			(arrow_length 4)
+			(text_position_mode 0)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "120"
+			(at 85.7 131 90)
+			(layer "Cmts.User")
+			(uuid "14e28655-beae-4fef-ad3f-c8af4e670efc")
+			(effects
+				(font
+					(size 4 4)
+					(thickness 0.8)
+					(bold yes)
+				)
+			)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "Cmts.User")
+		(uuid "8cefc895-fbdc-494c-9ce3-f8a6a52fa1d3")
+		(pts
+			(xy 140 185) (xy 140 77)
+		)
+		(height -38.7)
+		(orientation 1)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 0)
+			(precision 4)
+			(suppress_zeroes yes)
+		)
+		(style
+			(thickness 0.5)
+			(arrow_length 4)
+			(text_position_mode 2)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "108"
+			(at 95.5 130.999999 90)
+			(layer "Cmts.User")
+			(uuid "8cefc895-fbdc-494c-9ce3-f8a6a52fa1d3")
+			(effects
+				(font
+					(size 4 4)
+					(thickness 0.8)
+					(bold yes)
+				)
+			)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "Cmts.User")
+		(uuid "9a6b6883-43f6-4b71-9b17-77497be96482")
+		(pts
+			(xy 140 185) (xy 233 185)
+		)
+		(height 37)
+		(orientation 0)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 0)
+			(precision 4)
+			(suppress_zeroes yes)
+		)
+		(style
+			(thickness 0.5)
+			(arrow_length 4)
+			(text_position_mode 0)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "93"
+			(at 186.5 217.2 0)
+			(layer "Cmts.User")
+			(uuid "9a6b6883-43f6-4b71-9b17-77497be96482")
+			(effects
+				(font
+					(size 4 4)
+					(thickness 0.8)
+					(bold yes)
+				)
+			)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "Cmts.User")
+		(uuid "c34af048-9b30-4484-92d0-bd5ed7874d71")
+		(pts
+			(xy 134 183.2) (xy 239 183.2)
+		)
+		(height 48.7)
+		(orientation 0)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 0)
+			(precision 4)
+			(suppress_zeroes yes)
+		)
+		(style
+			(thickness 0.5)
+			(arrow_length 4)
+			(text_position_mode 2)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "105"
+			(at 186.5 227.2 0)
+			(layer "Cmts.User")
+			(uuid "c34af048-9b30-4484-92d0-bd5ed7874d71")
+			(effects
+				(font
+					(size 4 4)
+					(thickness 0.8)
+					(bold yes)
 				)
 			)
 		)
