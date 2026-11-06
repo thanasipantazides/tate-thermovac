@@ -72,3 +72,70 @@ If coupling to the coplanar GND as well, we have:
 - 90 Z traces W/S = 0.2675/0.2 mm, with 0.2 mm gap to coplanar GND
 - 100 Z traces W/S = 0.2042/0.2 mm, with 0.2 mm gap to coplanar GND
 
+## Bringup
+
+### 4 Nov 2026
+
+With luck, bringing up power on board.
+
+- [x] Remove `R18` jumper bridge for 5V to board power.
+- [x] Beep out regulator and board, check for rail-to-`GND` shorts.
+  - `+5V-GND`: open.
+  - `+3V3-GND`: open.
+  - `VIN-GND`: open.
+  - `FB-GND`: open.
+  - `USB.VBUS-GND`: open.
+  - `USB.VBUS-+5V`: open.
+  - Note: also checked several of the rails to each other, also all open.
+- [x] Add `C60`.
+  - Using a 50 V rather than 100 V part for this, but should be fine. Samsung CL10B104KB8NNNC.
+- [x] Jump `SW1.P1-SW1.P2` (bypass switch) to let 12V into regulator. 
+- [x] Add jumpers for 12V input.
+- [x] Smoketest.
+  - No smoke. Then closed `R18` jumper. Still no smoke.
+  - Next, try adding RPi so we have a 3.3V reg doing something.
+  - But first, try loading 5V bus with ~4 A load.
+
+### 5 Nov 2026
+
+Try static load of ~1.1 Ohms. Should be 4.54 A current out.
+
+Get 4.66 V across load, 4.95 V at board. Power supply reports 23 W output. Output is dead quiet, ~20 mV peak-peak.
+
+### 6 Nov 2026
+
+Plans:
+- Populate switches and boot Pi.
+
+#### To boot (eMMC flash):
+- [ ] Connect compute module to board.
+- [ ] Close `SW2` to ground `nRPI_BOOT`. This should force the Pi to boot from USB, _and_ disable `U9` from feeding 5V to the USB port.
+- [ ] Connect the USB to the laptop.
+- [ ] Power on the board.
+- [ ] [Configure Raspberry Pi Imager](https://www.raspberrypi.com/documentation/computers/compute-module.html#set-rpiboot-imager) on the laptop.
+- [ ] Flash the image using Raspberry Pi Imager.
+- [ ] Power off the board.
+- [ ] Open `SW2` to release `nRPI_BOOT`.
+
+#### Doing the boot:
+
+- [x] Connect compute module to board.
+- [x] Close `SW2` to ground `nRPI_BOOT`. This should force the Pi to boot from USB, _and_ disable `U9` from feeding 5V to the USB port.
+  - Confirmed this by probing `TP8` (`VBUS`) with no CM4 connected but the board powered.
+- [x] Connect the USB to the laptop.
+  - Red light `D2` on on board, even with no board power.
+- [x] Power on the board.
+  - 51 mA consumption from bench supply. No D1 light.
+  - No device shows up in RPi Imager app.
+- ... Figured out I need to close `JP1` to set GPIO VREF in order to boot. Did this, then the board is immediately recognized on plugging into laptop.
+- [x] [Configure Raspberry Pi Imager](https://www.raspberrypi.com/documentation/computers/compute-module.html#set-rpiboot-imager) on the laptop.
+  - Using GUI desktop for now, since we have no Ethernet port. Can see signs of life through HDMI.
+  - Set hostname: `thermovac`
+  - Set username: `spacephysics`
+  - Set password: `neitherColdNorHotNorGloomOfNight`
+  - It is loading the image.
+- [x] Flash the image using Raspberry Pi Imager.
+- [x] Unplug the board.
+- [x] Open `SW2` to release `nRPI_BOOT`.
+- [x] Connect to 12 V power and a display, and power on.
+  - I see the desktop show up on monitor. Good. I have no USB port and the Ethernet jack didn't ship correctly, so this where we stop.
